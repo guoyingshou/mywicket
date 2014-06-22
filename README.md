@@ -1,4 +1,2 @@
-mywicket
-========
-
-wicket-sample
+profile
+=======

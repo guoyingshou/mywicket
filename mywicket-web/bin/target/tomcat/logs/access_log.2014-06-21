@@ -1,0 +1,7 @@
+127.0.0.1 - - [21/Jun/2014:15:15:07 +0800] "GET /mywicket-web/bookmarkable/com.tissue.social.Test2Page HTTP/1.1" 302 - http-bio-8080-exec-1 50
+127.0.0.1 - - [21/Jun/2014:15:15:07 +0800] "GET /mywicket-web/wicket/bookmarkable/com.tissue.social.Test2Page HTTP/1.1" 200 139 http-bio-8080-exec-2 67
+127.0.0.1 - - [21/Jun/2014:15:15:07 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+127.0.0.1 - - [21/Jun/2014:15:19:07 +0800] "GET /mywicket-web/wicket/bookmarkable/com.tissue.social.Test2Page HTTP/1.1" 200 139 http-bio-8080-exec-1 111
+127.0.0.1 - - [21/Jun/2014:15:19:07 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+127.0.0.1 - - [21/Jun/2014:15:19:21 +0800] "GET /mywicket-web/wicket/bookmarkable/com.tissue.social.Test2Page?name=guo&gendeer=m HTTP/1.1" 200 139 http-bio-8080-exec-2 4
+127.0.0.1 - - [21/Jun/2014:15:19:21 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
