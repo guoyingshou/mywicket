@@ -6,11 +6,16 @@
   </appender>
 
   <!--
-  <logger name="org.springframework.core" level="DEBUG"/>
   <logger name="org.springframework.web" level="DEBUG"/>
-  -->
   <logger name="com.tissue" level="DEBUG"/>
-  <logger name="org.springframework.security" level="DEBUG"/>
+  <logger name="org.apache.wicket" level="DEBUG"/>
+
+  <logger name="org.apache.wicket.RequestListenerInterface" level="DEBUG"/>
+  <logger name="org.apache.wicket.protocol.http" level="DEBUG"/>
+  <logger name="org.apache.tomcat" level="DEBUG"/>
+  -->
+
+  <logger name="org.apache.wicket.request.mapper" level="DEBUG"/>
 
   <root level="INFO">
     <appender-ref ref="STDOUT" />

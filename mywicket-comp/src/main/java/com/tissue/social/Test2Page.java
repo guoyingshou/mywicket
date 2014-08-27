@@ -13,11 +13,4 @@ public class Test2Page extends MyTemplate {
         System.out.println("noooo param...");
     }
 
-    /**
-    public Test2Page(PageParameters param) {
-        System.out.println("param...");
-
-    }
-    */
-
 }

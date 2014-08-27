@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <body>
+
+        <div>测试首页</div>
+        <div wicket:id="currentLocale"></div>
+        <div><wicket:message key="home">original home title</wicket:message></div>
+        <a href="#" wicket:id="changeLocale">changeLocale</a>
+        <hr/>
+
+        <div wicket:id="message1"></div>
+        <hr/>
+
+        <a href="#" wicket:id="testlink">testlink using Link component to a stateful page</a>
+        <br/>
+
+        <a href="#" wicket:id="statelesslink">"statelesslin" using Link component to a stateless page</a>
+        <br/>
+
+        <a href="#" wicket:id="statelesslink2">"statelesslink2" using StetelessLink component to a stateless page2</a>
+        <br/>
+
+        <a href="#" wicket:id="test3pagelink">"test3page"</a>
+        <br/>
+
+        <a href="#" wicket:id="ajaxlink">"ajaxlink" using AjaxLink component to a ajax test page</a>
+        <br/>
+
+        <a href="#" wicket:id="exlink">exlink using ExternalLink component to a external page</a>
+        <br/>
+
+        <a href="#" wicket:id="bookmarkablePageLink">"bookmarkablePageLink" using BookmarkablePageLink to bookmarkable component render test page</a>
+        <br/>
+
+        <wicket:link>
+
+            <a href="ResourceTestPage.html">wicket:link tag to ResourceTestPage</a>
+            <br/>
+
+            <a href="RepeaterTestPage.html">wicket:link tag to RepeaterTestPage</a>
+            <br/>
+
+            <a href="/com/tissue/social/FormTestPage.html">wicket:link tag to FormTestPage</a>
+            <br/>
+
+            <a href="FragmentTestPage.html">wicket:link tag to FragmentTestPage</a>
+            <br/>
+
+         </wicket:link>
+        <hr/>
+
+    </body>
+
+</html>
+

@@ -1,0 +1,41 @@
+<wicket:extend>
+    <div>Resource test page content</div>
+
+    <div wicket:id="testmsgUsingResourceBundle"></div>
+
+    <div wicket:id="currentLocale"></div>
+    <a href="#" wicket:id="changeLocale">changeLocale</a>
+    <hr/>
+    <div>
+    <a href="#" wicket:id="rlink1">direct access through resource link</a>
+    </div>
+
+    <div>
+    <a href="#" wicket:id="rlink2">shared resource access through resource link2</a>
+    </div>
+
+    <div>
+    <a href="my">access mounted resource</a>
+    </div>
+
+    <hr/>
+
+    <div>
+    <wicket:link>
+        <img src="images/image1.png" alt="image1"/>
+    </wicket:link>
+    </div>
+
+    <div>
+        <img wicket:id="testimg" alt="testimg"/>
+    </div>
+
+    <div>
+        <img wicket:id="testimg2" alt="testimg2"/>
+    </div>
+
+    <div>
+        <img src="images/Image.png" alt="Image.png">
+    </div>
+
+</wicket:extend>

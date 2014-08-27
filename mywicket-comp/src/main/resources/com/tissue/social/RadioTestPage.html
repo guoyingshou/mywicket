@@ -1,0 +1,23 @@
+<wicket:extend>
+    <div><h2>radio test page</h2></div>
+    <div>
+        <!--
+            <input type="radio" name="ticker" value="AAPL"/>Apple<br/>
+            <input type="radio" name="ticker" value="GOOG"/>Google<br/>
+            <input type="radio" name="ticker" value="MSFT"/>Microsoft<br/>
+                -->
+<!--
+            <label><input type="radio" name="ticker" value="AAPL"/>Apple</label>
+            <label><input type="radio" name="ticker" value="GOOG"/>Google</label>
+            <label><input type="radio" name="ticker" value="MSFT"/>Microsoft</label>
+                -->
+         <form wicket:id="form">
+            <wicket:container wicket:id="group">
+                <label><input wicket:id="aapl" type="radio" name="ticker" />Apple</label>
+                <label><input wicket:id="goog" type="radio" name="ticker" />Google</label>
+                <label><input wicket:id="msft" type="radio" name="ticker" />Microsoft</label>
+            </wicket:container>
+            <input type="submit" value="submit" />
+         </form>
+     </div>
+</wicket:extend>
