@@ -13,13 +13,13 @@
   <packaging>jar</packaging>
   <dependencies>
 
-      <!--
     <dependency>
       <groupId>com.tissue</groupId>
-      <artifactId>social-service</artifactId>
+      <artifactId>mywicket-service</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
 
+      <!--
     <dependency>
       <groupId>com.tissue</groupId>
       <artifactId>tissue-commons</artifactId>
@@ -41,7 +41,16 @@
     <dependency>
       <groupId>org.apache.wicket</groupId>
       <artifactId>wicket-core</artifactId>
-      <version>${wicket.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.wicket</groupId>
+      <artifactId>wicket-auth-roles</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.wicket</groupId>
+      <artifactId>wicket-spring</artifactId>
     </dependency>
 
     <dependency>
@@ -59,11 +68,6 @@
 -->
 
     <!--
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-webmvc</artifactId>
-    </dependency>
-
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context-support</artifactId>

@@ -1,9 +1,11 @@
 package com.tissue.social;
 
 import org.apache.wicket.markup.ComponentTag;
+/**
 import org.apache.wicket.markup.IMarkupFragment;
 import org.apache.wicket.markup.Markup;
 import org.apache.wicket.markup.MarkupElement;
+*/
 import org.apache.wicket.markup.MarkupStream;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
@@ -14,6 +16,7 @@ public class Test4Page extends WebPage {
 
     public Test4Page() {
         super();
+
         Label l = new Label("msg", "hello...") {
             private static final long serialVersionUID = 1L;
             @Override

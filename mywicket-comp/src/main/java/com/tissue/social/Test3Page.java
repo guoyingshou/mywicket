@@ -15,12 +15,20 @@ import org.apache.wicket.markup.html.link.ExternalLink;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.link.ResourceLink;
 import org.apache.wicket.request.resource.SharedResourceReference;
+import org.apache.wicket.spring.injection.annot.SpringBean;
+
+import com.tissue.social.services.AboutService;
 
 public class Test3Page extends WebPage {
     private static final long serialVersionUID = 1l;
 
+    @SpringBean
+    private AboutService aboutService;
+
     public Test3Page() {
         super();
+
+        System.out.println("++++ " + aboutService);
 
         /**
         Thread.dumpStack();
