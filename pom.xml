@@ -18,8 +18,9 @@
 
   <modules>
     <module>mywicket-web</module>
-    <module>mywicket-service</module>
     <module>mywicket-comp</module>
+    <module>mywicket-service</module>
+    <module>mywicket-dao</module>
   </modules>
 
   <properties>

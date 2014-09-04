@@ -28,11 +28,12 @@ public class RepeaterTestPage extends MyTemplateWithMarkupInheritance {
 
     private static final long serialVersionUID = 1l;
 
-    private List<String> names = Arrays.asList("guo", "liu", "wang");
+    //private List<String> names = Arrays.asList("guo", "liu", "wang");
 
     public RepeaterTestPage() {
         super();
 
+        /**
         ListView<String> listView = new ListView<String>("listView", names) {
             private static final long serialVersionUID = 1L;
 
@@ -43,7 +44,9 @@ public class RepeaterTestPage extends MyTemplateWithMarkupInheritance {
             
         };
         add(listView);
+        */
 
+        /**
         ListView<Person> propertyListView = new PropertyListView<Person>("propertyListView", getPersons()) {
             private static final long serialVersionUID = 1L;
 
@@ -54,7 +57,9 @@ public class RepeaterTestPage extends MyTemplateWithMarkupInheritance {
             }
         };
         add(propertyListView);
+        */
 
+        /**
         PageableListView<Person> pageableListView = new PageableListView<Person>("pageableListView", getPersons(), 2) {
             private static final long serialVersionUID = 1L;
 
@@ -66,6 +71,7 @@ public class RepeaterTestPage extends MyTemplateWithMarkupInheritance {
         };
         add(pageableListView);
         add(new AjaxPagingNavigator("nav", pageableListView));
+        */
 
         //repeating view
         RepeatingView repeatingView = new RepeatingView("repeatingView");

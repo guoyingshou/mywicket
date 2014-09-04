@@ -5,6 +5,7 @@
   <projects>
     <project>mywicket-comp</project>
     <project>mywicket-service</project>
+    <project>mywicket-dao</project>
   </projects>
   <buildSpec>
     <buildCommand>

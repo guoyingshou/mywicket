@@ -18,7 +18,7 @@ public class SecuredApplication extends AuthenticatedWebApplication {
 
         //spring related init
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
-        ctx.scan("com.tissue.social.services.impl");
+        ctx.scan("com.tissue.social.dao.impl", "com.tissue.social.services.impl");
         ctx.refresh();
 
         getComponentInstantiationListeners().add(new SpringComponentInjector(this, ctx));

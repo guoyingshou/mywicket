@@ -4,6 +4,7 @@ public class Person {
     private String id;
     private String name;
     private char gender;
+    private String email;
 
     public Person(String id, String name, char gender) {
         this.id = id;
@@ -51,6 +52,20 @@ public class Person {
      */
     public void setGender(char gender) {
         this.gender = gender;
+    }
+
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 }
