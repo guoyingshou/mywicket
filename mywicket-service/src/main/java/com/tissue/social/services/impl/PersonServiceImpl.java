@@ -25,4 +25,14 @@ public class PersonServiceImpl implements PersonService {
         return personDao.getPersons();
     }
 
+    @Override
+    public String getPassword(String name) {
+        return personDao.getPassword(name);
+    }
+
+    @Override
+    public Person getPersonByUsernameAndPassword(String username, String password) {
+        return personDao.getPersonByUsernameAndPassword(username, password);
+    }
+
 }

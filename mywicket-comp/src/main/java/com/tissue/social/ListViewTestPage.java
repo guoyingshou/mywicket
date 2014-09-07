@@ -14,13 +14,10 @@ public class ListViewTestPage extends MyTemplateWithMarkupInheritance {
 
     private static final long serialVersionUID = 1l;
 
-    @SpringBean
-    private PersonService personService;
-
     public ListViewTestPage() {
         super();
 
-        ListView<Person> listView = new ListView<Person>("listView", new MyListModel(personService)) {
+        ListView<Person> listView = new ListView<Person>("listView", new MyListModel()) {
             private static final long serialVersionUID = 1L;
 
             @Override

@@ -1,10 +1,15 @@
 package com.tissue.social;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Person {
     private String id;
     private String name;
     private char gender;
     private String email;
+
+    private List<String> roles = new ArrayList<>();
 
     public Person(String id, String name, char gender) {
         this.id = id;
@@ -68,4 +73,12 @@ public class Person {
         this.email = email;
     }
 
+    public void addRole(String role) {
+        roles.add(role);
+    }
+
+    public List<String> getRoles() {
+        //todo return unmodifiable
+        return roles;
+    }
 }

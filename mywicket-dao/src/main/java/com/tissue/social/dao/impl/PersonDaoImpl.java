@@ -31,4 +31,23 @@ public class PersonDaoImpl implements PersonDao {
         return persons;
     }
 
+    @Override
+    public String getPassword(String name) {
+        return "guo";
+    }
+
+    @Override
+    public Person getPersonByUsernameAndPassword(String username,
+            String password) {
+        Person p;
+        if("guo".equals(username)) {
+            p  = new Person("1", username, 'M');
+            p.addRole("admin");
+        }
+        else {
+            p  = new Person("2", username, 'F');
+        }
+        return p;
+    }
+
 }
