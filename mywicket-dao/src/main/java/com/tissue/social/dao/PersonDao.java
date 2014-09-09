@@ -10,4 +10,7 @@ public interface PersonDao {
     String getPassword(String name);
 
     Person getPersonByUsernameAndPassword(String username, String password);
+
+    List<Person> getPersons(long first, long count);
+    int getSize();
 }

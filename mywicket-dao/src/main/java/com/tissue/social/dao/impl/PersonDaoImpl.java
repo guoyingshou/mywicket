@@ -11,6 +11,15 @@ import com.tissue.social.dao.PersonDao;
 @Component("personDao")
 public class PersonDaoImpl implements PersonDao {
 
+    private List<Person> persons = new ArrayList<>();
+
+    {
+        persons.add(new Person("1", "guo", 'M'));
+        persons.add(new Person("2", "liu", 'F'));
+        persons.add(new Person("3", "wan", 'F'));
+        persons.add(new Person("4", "zha", 'M'));
+    }
+
     @Override
     public Person getPerson(String id) {
         if("1".equals(id)) {
@@ -23,11 +32,6 @@ public class PersonDaoImpl implements PersonDao {
 
     @Override
     public List<Person> getPersons() {
-        List<Person> persons = new ArrayList<>();
-        persons.add(new Person("1", "guo", 'M'));
-        persons.add(new Person("2", "liu", 'F'));
-        persons.add(new Person("3", "wan", 'F'));
-        persons.add(new Person("4", "zha", 'M'));
         return persons;
     }
 
@@ -50,4 +54,15 @@ public class PersonDaoImpl implements PersonDao {
         return p;
     }
 
+    @Override
+    public List<Person> getPersons(long first, long count) {
+        int start = (int)first;
+        int end = start + (int)count;
+        return persons.subList(start, end);
+    }
+
+    @Override
+    public int getSize() {
+        return persons.size();
+    }
 }

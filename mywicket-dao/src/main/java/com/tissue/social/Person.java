@@ -1,9 +1,12 @@
 package com.tissue.social;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Person {
+public class Person implements Serializable {
+    private static final long serialVersionUID = 1l;
+
     private String id;
     private String name;
     private char gender;

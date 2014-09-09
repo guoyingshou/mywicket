@@ -1,5 +1,6 @@
 package com.tissue.social.services.impl;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,4 +36,14 @@ public class PersonServiceImpl implements PersonService {
         return personDao.getPersonByUsernameAndPassword(username, password);
     }
 
+    @Override
+    public Iterator<Person> iterator(long first, long count) {
+        return personDao.getPersons(first, count).iterator();
+    }
+
+    @Override 
+    public int getSize() {
+        return personDao.getSize();
+    }
 }
+

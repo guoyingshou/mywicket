@@ -19,13 +19,14 @@ public class SecuredApplication extends AuthenticatedWebApplication {
     public void init() {
         super.init();
 
-        //spring related init
+        //spring integration config start
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.scan("com.tissue.social.dao.impl", "com.tissue.social.services.impl");
         ctx.refresh();
-
         getComponentInstantiationListeners().add(new SpringComponentInjector(this, ctx));
+        //spring integration config end
 
+        //MetaDatRoleAuthorizationStrategy config
         MetaDataRoleAuthorizationStrategy.authorize(MetaSecuredTestPage.class, "admin");
     }
 
