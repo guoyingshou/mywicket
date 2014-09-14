@@ -19,8 +19,4 @@
     <select id="getSize" resultType="int">
         select count(*) from tb_user
     </select>
-
-
-
-
 </mapper>
