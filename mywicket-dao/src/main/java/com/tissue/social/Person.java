@@ -1,20 +1,19 @@
 package com.tissue.social;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Person implements Serializable {
-    private static final long serialVersionUID = 1l;
+public class Person {
+    //private static final long serialVersionUID = 1l;
 
-    private String id;
+    private Integer id;
     private String name;
-    private char gender;
+    private String gender;
     private String email;
 
     private List<String> roles = new ArrayList<>();
 
-    public Person(String id, String name, char gender) {
+    public Person(Integer id, String name, String gender) {
         this.id = id;
         this.name = name;
         this.gender = gender;
@@ -23,14 +22,14 @@ public class Person implements Serializable {
     /**
      * @return the id
      */
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -51,14 +50,14 @@ public class Person implements Serializable {
     /**
      * @return the gender
      */
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
     /**
      * @param gender the gender to set
      */
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 

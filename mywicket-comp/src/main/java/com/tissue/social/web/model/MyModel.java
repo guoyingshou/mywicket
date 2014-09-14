@@ -1,5 +1,6 @@
 package com.tissue.social.web.model;
 
+import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.LoadableDetachableModel;
 
 import com.tissue.social.Person;
@@ -8,10 +9,10 @@ import com.tissue.social.services.PersonService;
 public class MyModel extends LoadableDetachableModel<Person> {
     private static final long serialVersionUID = 1l;
 
-    private String personId;
+    private Integer personId;
     private PersonService personService;
 
-    public MyModel(PersonService personService, String personId) {
+    public MyModel(PersonService personService, Integer personId) {
         this.personService = personService;
         this.personId = personId;
     }
@@ -19,7 +20,7 @@ public class MyModel extends LoadableDetachableModel<Person> {
     /**
      * @return the personId
      */
-    public String getPersonId() {
+    public Integer getPersonId() {
         return personId;
     }
 
@@ -27,7 +28,7 @@ public class MyModel extends LoadableDetachableModel<Person> {
     /**
      * @param personId the personId to set
      */
-    public void setPersonId(String personId) {
+    public void setPersonId(Integer personId) {
         this.personId = personId;
     }
 

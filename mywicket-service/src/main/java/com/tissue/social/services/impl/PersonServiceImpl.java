@@ -17,7 +17,7 @@ public class PersonServiceImpl implements PersonService {
     private PersonDao personDao;
 
     @Override
-    public Person getPerson(String id) {
+    public Person getPerson(Integer id) {
         return personDao.getPerson(id);
     }
 
@@ -26,10 +26,12 @@ public class PersonServiceImpl implements PersonService {
         return personDao.getPersons();
     }
 
+    /**
     @Override
     public String getPassword(String name) {
         return personDao.getPassword(name);
     }
+    */
 
     @Override
     public Person getPersonByUsernameAndPassword(String username, String password) {
@@ -38,7 +40,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public Iterator<Person> iterator(long first, long count) {
-        return personDao.getPersons(first, count).iterator();
+        return personDao.getPagedPersons(first, count).iterator();
     }
 
     @Override 

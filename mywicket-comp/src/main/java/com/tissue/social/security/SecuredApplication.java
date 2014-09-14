@@ -20,10 +20,15 @@ public class SecuredApplication extends AuthenticatedWebApplication {
         super.init();
 
         //spring integration config start
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
-        ctx.scan("com.tissue.social.dao.impl", "com.tissue.social.services.impl");
-        ctx.refresh();
-        getComponentInstantiationListeners().add(new SpringComponentInjector(this, ctx));
+        /**
+         * Besides add the following codes,
+         * the ContextLoaderListener need to be configured in web.xml
+         * and the spring config file must be named applicationContext.xml 
+         * and be placed in /WEB-INF directory.
+         */
+        
+        getComponentInstantiationListeners().add(new SpringComponentInjector(this));
+
         //spring integration config end
 
         //MetaDatRoleAuthorizationStrategy config

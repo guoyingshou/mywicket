@@ -16,6 +16,7 @@
 
   <logger name="org.springframework" level="DEBUG"/>
   <logger name="org.apache.wicket.request.mapper" level="DEBUG"/>
+  <logger name="org.mybatis" level="DEBUG"/>
 
   <root level="INFO">
     <appender-ref ref="STDOUT" />

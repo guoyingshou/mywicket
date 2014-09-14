@@ -20,7 +20,7 @@ public class Test5Page extends MyTemplateWithMarkupInheritance {
     public Test5Page(PageParameters params) {
         super();
 
-        String id = params.get("id").toString();
+        Integer id = params.get("id").toInteger();
 
         Label l = new Label("msg", new PropertyModel<Person>(new MyModel(personService, id), "name"));
         add(l);
