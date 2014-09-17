@@ -2,7 +2,10 @@ package com.tissue.social.resources;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Set;
 
+import org.apache.wicket.request.IRequestParameters;
+import org.apache.wicket.request.Request;
 import org.apache.wicket.request.resource.AbstractResource;
 
 public class MyResource extends AbstractResource {
@@ -10,6 +13,13 @@ public class MyResource extends AbstractResource {
 
     @Override
     public ResourceResponse newResourceResponse(Attributes attrs) {
+        Request req = attrs.getRequest();
+        IRequestParameters params = req.getQueryParameters();
+        Set<String> names = params.getParameterNames();
+        for(String name : names) {
+            System.out.println(name);
+        }
+
         ResourceResponse res = new ResourceResponse();
         res.setWriteCallback(new WriteCallback() {
             @Override

@@ -23,8 +23,8 @@
     </bean>
 
     <bean id="personDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="mapperInterface" value="com.tissue.social.dao.PersonDao" />
         <property name="sqlSessionFactory" ref="sqlSessionFactory" />
+        <property name="mapperInterface" value="com.tissue.social.dao.PersonDao" />
     </bean>
 
 </beans>

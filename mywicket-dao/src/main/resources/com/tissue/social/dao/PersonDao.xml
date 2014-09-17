@@ -12,7 +12,7 @@
         select * from tb_user where id = #{id}
     </select>
 
-    <select id="getPagedPersons" parameterType="map" resultType="com.tissue.social.Person">
+    <select id="getPagedPersons" resultType="com.tissue.social.Person">
         select * from tb_user offset #{0} limit #{1} 
     </select>
 

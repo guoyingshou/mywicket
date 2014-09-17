@@ -64,10 +64,11 @@
     <filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
     <init-param>
         <param-name>applicationClassName</param-name>
-        <!--
-        <param-value>com.tissue.social.MyWicketApp</param-value>
-        -->
         <param-value>com.tissue.social.security.SecuredApplication</param-value>
+    </init-param>
+    <init-param>
+        <param-name>ignorePaths</param-name>
+        <param-value>git/</param-value>
     </init-param>
   </filter>
 
@@ -76,9 +77,50 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
-   <error-page>
-      <error-code>404</error-code>
-      <location>/pageNotFound</location>
-  </error-page>
+  <!--
+   <filter>
+     <filter-name>GitFilter</filter-name>
+     <filter-class>org.eclipse.jgit.http.server.GitFilter</filter-class>
+     <init-param>
+         <param-name>base-path</param-name>
+         <param-value>/home/guoyingshou/tmp/repos</param-value>
+     </init-param>
+     <init-param>
+         <param-name>export-all</param-name>
+         <param-value>true</param-value>
+     </init-param>
+   </filter>
+   <filter-mapping>
+     <filter-name>GitFilter</filter-name>
+     <url-pattern>/git/*</url-pattern>
+   </filter-mapping>
+   <filter-mapping>
+     <filter-name>GitFilter</filter-name>
+     <url-pattern>/r/*</url-pattern>
+   </filter-mapping>
+   -->
+
+   <servlet>
+       <servlet-name>GitServlet</servlet-name>
+       <servlet-class>org.eclipse.jgit.http.server.GitServlet</servlet-class>
+       <init-param>
+           <param-name>base-path</param-name>
+           <param-value>/home/guoyingshou/tmp/repos</param-value>
+       </init-param>
+       <init-param>
+           <param-name>export-all</param-name>
+           <param-value>1</param-value>
+       </init-param>
+   </servlet>
+
+   <servlet-mapping>
+          <servlet-name>GitServlet</servlet-name>
+          <url-pattern>/git/*</url-pattern>
+   </servlet-mapping>
+
+ <error-page>
+     <error-code>404</error-code>
+     <location>/pageNotFound</location>
+ </error-page>
 
 </web-app>

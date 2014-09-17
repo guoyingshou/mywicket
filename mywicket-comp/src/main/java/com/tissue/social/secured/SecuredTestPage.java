@@ -7,14 +7,6 @@ import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import com.tissue.social.web.templates.MyTemplateWithMarkupInheritance;
 
 public abstract class SecuredTestPage extends MyTemplateWithMarkupInheritance {
-    /**
-    //private static final long serialVersionUID = 1L;
-
-    public SecuredTestPage1() {
-
-    }
-    */
-
     @Override
     protected void onConfigure() {
         super.onConfigure();
@@ -23,12 +15,4 @@ public abstract class SecuredTestPage extends MyTemplateWithMarkupInheritance {
             app.restartResponseAtSignInPage();
         }
     }
-
-    /**
-    @Override
-    protected void onInitialize() {
-        super.onInitialize();
-    }
-    */
-
 }
